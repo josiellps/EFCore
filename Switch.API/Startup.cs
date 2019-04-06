@@ -22,7 +22,8 @@ namespace Switch.API
             var conn = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<SwitchContext>(optionsBuilder => optionsBuilder
                 .UseLazyLoadingProxies()
-                .UseMySql(Configuration.GetConnectionString("DefaultConnection"), m => m.MigrationsAssembly("Switch.Infra.Data")));
+                .UseMySql(Configuration.GetConnectionString("DefaultConnection"),
+                m => m.MigrationsAssembly("Switch.Infra.Data")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
