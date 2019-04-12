@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Switch.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,5 +9,12 @@ namespace Switch.Domain.Entities
     {
         public int Id { get; set; }
         public string Descricao { get; set; }
+
+        public bool NaoEspecificado { get { return Id == (int)StatusRelacionamentoEnum.NaoEspecificado; } }
+        public bool Casado { get { return Id == (int)StatusRelacionamentoEnum.Casado; } }
+        public bool RelacionamentoSerio { get { return Id == (int)StatusRelacionamentoEnum.RelacionamentoSerio; } }
+        public bool Solteiro { get { return Id == (int)StatusRelacionamentoEnum.Solteiro; } }
+
+
     }
 }
