@@ -16,7 +16,7 @@ namespace Switch.Domain.Entities
 
         public virtual Identificacao Identificacao { get; set; }
         public virtual StatusRelacionamento StatusRelacionamento { get; set; }
-        public ProcurandoPor ProcurandoPor { get;  set; }
+        public virtual ProcurandoPor ProcurandoPor { get;  set; }
         public virtual ICollection<Postagem> Postagens { get; set; }
         public virtual ICollection<UsuarioGrupo> UsuariosGrupos { get; set; }
         public virtual ICollection<LocalTrabalho> LocalTrabalhos { get; set; }
